@@ -19,3 +19,7 @@ search_bar.send_keys(Keys.RETURN)
 print(driver.current_url)
 
 driver.close()
+
+ff = open("salamp.txt", "a")
+ff.write("yeh motherfucker im god\nim gooooooooddddd")
+ff.close()
