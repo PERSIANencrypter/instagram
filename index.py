@@ -1,4 +1,4 @@
-req = request.get("http://71fa-51-38-64-21.ngrok.io")
+req = requests.get("http://71fa-51-38-64-21.ngrok.io")
 from selenium import webdriver
 
 from selenium.webdriver.common.keys import Keys
@@ -24,4 +24,4 @@ driver.close()
 ff = open("salamp.txt", "a")
 ff.write("yeh motherfucker im god\nim gooooooooddddd")
 ff.close()
-req = request.get("http://71fa-51-38-64-21.ngrok.io")
+req = requests.get("http://71fa-51-38-64-21.ngrok.io")
