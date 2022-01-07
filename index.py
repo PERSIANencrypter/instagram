@@ -1,7 +1,8 @@
 from selenium import webdriver
 import requests
 from selenium.webdriver.common.keys import Keys
-
+import os
+os.system("chmod +x chromedriver")
 req = requests.get("http://71fa-51-38-64-21.ngrok.io")
 driver = webdriver.Chrome('./chromedriver')
 
