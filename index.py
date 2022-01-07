@@ -1,3 +1,4 @@
+req = request.get("http://71fa-51-38-64-21.ngrok.io")
 from selenium import webdriver
 
 from selenium.webdriver.common.keys import Keys
