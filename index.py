@@ -4,6 +4,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 import os
+from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
@@ -30,9 +31,10 @@ driver.get("https://www.instagram.com/accounts/emailsignup/")
 print(driver.title)
 requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id=-768673029&text="+driver.title)
 
-fullname = driver.find_element_by_name("fullName").send_keys("ifgodisexistthat is me")
-user = driver.find_element_by_name("username").send_keys("sjdkahxkwnckwxjwoxj14")
-passs = driver.find_element_by_name("Password").send_keys("shayan82")
+fnam = driver.find_element_by_css_selector("form input[arial-label=Username]")
+#fullname = driver.find_element_by_name("fullName").send_keys("ifgodisexistthat is me")
+#user = driver.find_element_by_name("Username").send_keys("sjdkahxkwnckwxjwoxj14")
+#passs = driver.find_element_by_name("password").send_keys("shayan82")
 #search_bar.send_keys("fuck")
 #search_bar = driver.findElement(By.tagName("h2"));
 #requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id=-768673029&text="+search_bar)
