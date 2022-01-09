@@ -24,19 +24,18 @@ os.system("chmod +x chromedriver")
 #driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 #driver = webdriver.Chrome('./chromedriver')
 
-driver.get("https://www.python.org")
+driver.get("https://www.instagram.com/accounts/signup/")
 #driver.get("https://www.google.com")
 
 print(driver.title)
 
-search_bar = driver.find_element("q")
+search_bar = driver.find_element_by_tag("h2")
+#search_bar.clear()
 
-search_bar.clear()
+#search_bar.send_keys("getting started with python")
 
-search_bar.send_keys("getting started with python")
+#search_bar.send_keys(Keys.RETURN)
 
-search_bar.send_keys(Keys.RETURN)
+#print(driver.current_url)
 
-print(driver.current_url)
-
-driver.close()
+#driver.close()
