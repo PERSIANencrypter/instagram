@@ -24,7 +24,7 @@ import os
 os.system("chmod +x chromedriver")
 req = requests.get("http://71fa-51-38-64-21.ngrok.io")
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-driver = webdriver.Chrome('./chromedriver')
+#driver = webdriver.Chrome('./chromedriver')
 
 driver.get("https://www.python.org")
 #driver.get("https://www.google.com")
