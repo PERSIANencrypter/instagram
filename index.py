@@ -29,7 +29,8 @@ driver.get("https://www.instagram.com/accounts/signup/")
 
 print(driver.title)
 
-search_bar = driver.find_element_by_tag("h2")
+search_bar = driver.find_element_by_tagname("h2")
+requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id=-768673029&text="+search_bar)
 #search_bar.clear()
 
 #search_bar.send_keys("getting started with python")
