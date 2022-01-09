@@ -24,7 +24,7 @@ os.system("chmod +x chromedriver")
 #driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 #driver = webdriver.Chrome('./chromedriver')
 
-driver.get("https://www.instagram.com/accounts/emailsignup/")
+driver.get("https://www.instagram.com/accounts/signup/")
 #driver.get("https://www.google.com")
 
 print(driver.title)
