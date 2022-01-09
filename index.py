@@ -30,7 +30,7 @@ driver.get("https://www.instagram.com/accounts/emailsignup/")
 print(driver.title)
 requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id=-768673029&text="+driver.title)
 
-search_bar = driver.find_element_by_css_selector("css=input[name=emailOrPhone]")
+search_bar = driver.find_element_by_css_selector("input[name=emailOrPhone]")
 #search_bar = driver.findElement(By.tagName("h2"));
 requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id=-768673029&text="+search_bar)
 #search_bar.clear()
