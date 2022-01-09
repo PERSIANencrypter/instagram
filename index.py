@@ -30,10 +30,10 @@ driver.get("https://www.instagram.com/accounts/emailsignup/")
 print(driver.title)
 requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id=-768673029&text="+driver.title)
 
-driver.find_element_by_name("emailOrPhone").send_keys("s")
+driver.find_element_by_name(emailOrPhone).send_keys("s")
 #search_bar.send_keys("fuck")
 #search_bar = driver.findElement(By.tagName("h2"));
-requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id=-768673029&text="+search_bar)
+#requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id=-768673029&text="+search_bar)
 #search_bar.clear()
 
 #search_bar.send_keys("getting started with python")
