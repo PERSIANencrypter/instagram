@@ -4,6 +4,13 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 import os
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+
+options = Options()
+options.add_argument("start-maximized")
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 from selenium import webdriver
 chrome_options = webdriver.ChromeOptions()
 chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
