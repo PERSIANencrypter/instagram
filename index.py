@@ -29,7 +29,7 @@ driver.get("https://www.python.org")
 
 print(driver.title)
 
-search_bar = driver.find_element("q")
+search_bar = driver.find_element_by_name("q")
 
 search_bar.clear()
 
