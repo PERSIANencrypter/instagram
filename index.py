@@ -34,7 +34,7 @@ print(driver.title)
 requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id=-768673029&text="+driver.title)
 
 #fnam = driver.find_element_by_css_selector("form input[arial-label=Username]")
-email = driver.find_element_by_name("emailOrPhone").send_keys("mitedulu@mentonit.net")
+email = driver.find_element_by_name("emailOrPhone").send_keys("gholamisadegh76@gmail.com")
 fullname = driver.find_element_by_name("fullName").send_keys("ifgodisexisttekdke")
 user = driver.find_element_by_name("username").send_keys("vaghtsodjwidjwkdjwidjem")
 passs = driver.find_element_by_name("password").send_keys("shadjdjdjyan82")
