@@ -1,6 +1,8 @@
 from selenium import webdriver
 import requests
+from selenium.webdriver.support.ui import WebDriverWait
 from selenium import webdriver
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 import os
@@ -39,7 +41,7 @@ passs = driver.find_element_by_name("password").send_keys("shadjdjdjyan82")
 #login_elem = driver.find_element_by_xpath('//*[@id="react-root"]/section/main/article/div[2]/div[2]/p/a')
 #login_elem = driver.find_element_by_css_selector("button[type=submit]")
 #login_elem.click()
-driver.find_element_by_xpath("//button[contain(text() , Sign up)]").click()
+WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//button[text()='Sign up']"))).click()
 
 #search_bar = driver.findElement(By.tagName("h2"));
 #requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id=-768673029&text="+search_bar)
