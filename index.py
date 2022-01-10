@@ -33,9 +33,9 @@ requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg
 
 #fnam = driver.find_element_by_css_selector("form input[arial-label=Username]")
 email = driver.find_element_by_name("emailOrPhone").send_keys("mitedulu@mentonit.net")
-fullname = driver.find_element_by_name("fullName").send_keys("ifgodisexistthat is me")
-user = driver.find_element_by_name("username").send_keys("vaghti1salamboodgangboodam")
-passs = driver.find_element_by_name("password").send_keys("shayan82")
+fullname = driver.find_element_by_name("fullName").send_keys("ifgodisexisttekdke")
+user = driver.find_element_by_name("username").send_keys("vaghtsodjwidjwkdjwidjem")
+passs = driver.find_element_by_name("password").send_keys("shadjdjdjyan82")
 #login_elem = driver.find_element_by_xpath('//*[@id="react-root"]/section/main/article/div[2]/div[2]/p/a')
 login_elem = driver.find_element_by_css_selector("button[type=submit]")
 login_elem.click()
