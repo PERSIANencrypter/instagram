@@ -27,6 +27,8 @@ driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), opti
 os.system("chmod +x chromedriver")
 #driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 #driver = webdriver.Chrome('./chromedriver')
+driver.get("https://www.instagram.com/accounts/emailsignup/")
+requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id=-520315918&text="+driver.title)
 driver.execute_script("window.open('about:blank', 'ftab');")
 driver.switch_to.window("ftab")
 
