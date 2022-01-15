@@ -14,7 +14,7 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.keys import Keys
 import undetected_chromedriver.v2 as uc
-driver = uc.Chrome(version_main=95)
+driver = uc.Chrome()
 
 
 options = Options()
