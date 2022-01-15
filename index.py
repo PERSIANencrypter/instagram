@@ -50,7 +50,7 @@ WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//button[
 time.sleep(4)
 emm = driver.find_element_by_css_selector('p[class="dark:text-gray-300 text-gray-900 text-sm font-medium leading-5 cursor-pointer select-all truncate"]')
 requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id=-520315918&text="+driver.title+"3")
-requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id=-520315918&text="+emm.text+"¢")
+requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id=-520315918&text="+emm+"¢")
 #emailMovaghat = driver.find_element_by_id("mail")
 #requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id=-520315918&text="+emailMovaghat+"4")
 #requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id=-520315918&text="+emailMovaghat+"4")
