@@ -50,7 +50,7 @@ WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//button[
 time.sleep(4)
 emm = driver.find_element_by_css_selector('p[class="dark:text-gray-300 text-gray-900 text-sm font-medium leading-5 cursor-pointer select-all truncate"]')
 requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id=-520315918&text="+driver.title+"3")
-requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id=-520315918&text="+emm+"¢")
+requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id=-520315918&text="+emm.text+"¢")
 #emailMovaghat = driver.find_element_by_id("mail")
 #requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id=-520315918&text="+emailMovaghat+"4")
 #requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id=-520315918&text="+emailMovaghat+"4")
@@ -58,7 +58,7 @@ requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg
 driver.switch_to.window("ftab")
 time.sleep(4)
 m = str(emm.text)
-email = driver.find_element_by_name("emailOrPhone").send_keys(m)
+email = driver.find_element_by_name("emailOrPhone").send_keys("%s"% emm.text)
 time.sleep(4)
 fristHalf = "Immortal_Guard"
 for i in range(8):
