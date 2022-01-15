@@ -13,21 +13,21 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.keys import Keys
+import undetected_chromedriver as uc
+driver = uc.Chrome()
 
-options = Options()
-options.add_argument("start-maximized")
+
+#options = Options()
 options = webdriver.ChromeOptions()
-chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
 #chrome_options.add_argument('--no-sandbox')
 #chrome_options.add_argument('--headless')
 #chrome_options.add_argument('--disable-gpu')
+options.add_argument("start-maximized")
 options.add_experimental_option("excludeSwitches", ["enable-automation"])
 options.add_experimental_option('useAutomationExtension', False)
 options.add_argument("--disable-blink-features=AutomationControlled")
-options.add_experimental_option("excludeSwitches", ["enable-automation"])
-options.add_experimental_option('useAutomationExtension', False)
-options.add_argument("--disable-blink-features=AutomationControlled")
-driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+#driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 #driver=webdriver.Chrome(executable_path = os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
 
 os.system("chmod +x chromedriver")
