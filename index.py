@@ -56,7 +56,7 @@ requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg
 #requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id=-520315918&text="+emailMovaghat+"4")
 
 driver.switch_to.window("ftab")
-
+time.sleep(4)
 email = driver.find_element_by_name("emailOrPhone").send_keys(emm.text)
 time.sleep(4)
 fristHalf = "Immortal_Guard"
