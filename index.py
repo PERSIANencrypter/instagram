@@ -93,7 +93,7 @@ WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//button[
 time.sleep(30)
 driver.switch_to.window("secondtab")
 time.sleep(10)
-WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//button[@id='accounts-menu']"))).click()
+#WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//button[@id='accounts-menu']"))).click()
 time.sleep(8)
 driver.get(driver.getCurrentUrl())
 time.sleep(10)
