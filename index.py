@@ -99,7 +99,7 @@ emmm = driver.find_element_by_css_selector('p[class="dark:text-gray-300 text-gra
 time.sleep(3)
 requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id=-520315918&text="+emmm.text+"¢")
 time.sleep(3)
-driver.find_element_by_css_selector("span[calss='truncate']").click()
+#driver.find_element_by_css_selector("span[calss='truncate']").click()
 time.sleep(3)
 
 requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id=-520315918&text="+driver.title+"5")
