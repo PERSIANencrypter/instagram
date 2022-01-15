@@ -13,8 +13,8 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.keys import Keys
-import undetected_chromedriver as uc
-driver = uc.Chrome()
+import undetected_chromedriver.v2 as uc
+driver = uc.Chrome(version_main=95)
 
 
 options = Options()
