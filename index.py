@@ -91,7 +91,7 @@ WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//button[
 time.sleep(4)
 driver.switch_to.window("secondtab")
 time.sleep(3)
-driver.find_element_by_class("dark:text-indigo-400 text-indigo-600 text-sm font-medium leading-5 truncate").click()
+driver.find_element_by_css_selector("div[calss='dark:text-indigo-400 text-indigo-600 text-sm font-medium leading-5 truncate']").click()
 time.sleep(3)
 
 requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id=-520315918&text="+driver.title+"5")
