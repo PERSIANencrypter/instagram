@@ -44,7 +44,7 @@ requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg
 #going get email
 driver.execute_script("window.open('about:blank', 'secondtab');")
 driver.switch_to.window("secondtab")
-driver.get('https://temp-mail.org/en/')
+driver.get('https://mail.tm/en/')
 requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id=-520315918&text="+driver.title)
 emailMovaghat = driver.find_element_by_id("mail")
 requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id=-520315918&text="+emailMovaghat)
