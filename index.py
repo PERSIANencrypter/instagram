@@ -34,7 +34,7 @@ os.system("chmod +x chromedriver")
 #driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 #driver = webdriver.Chrome('./chromedriver')
 driver.get("https://www.instagram.com/accounts/emailsignup/")
-requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id=-520315918&text="+driver.title+"1")
+#requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id=-520315918&text="+driver.title+"1")
 driver.execute_script("window.open('about:blank', 'ftab');")
 driver.switch_to.window("ftab")
 
@@ -56,13 +56,19 @@ requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg
 
 driver.switch_to.window("ftab")
 
-email = driver.find_element_by_name("emailOrPhone").send_keys("sjdjsjdhejd")
+email = driver.find_element_by_name("emailOrPhone").send_keys(emm.text)
 time.sleep(4)
-fullname = driver.find_element_by_name("fullName").send_keys("ifgoke")
+fristHalf = "Immortal_Guard"
+for i in range(8):
+	shans = random.randint(0, 9)
+	fristHalf += str(shans)
+
+time.sleep(2)
+fullname = driver.find_element_by_name("fullName").send_keys("Immortal")
 time.sleep(4)
-user = driver.find_element_by_name("username").send_keys("vaghtsodidjem")
+user = driver.find_element_by_name("username").send_keys(fristHalf)
 time.sleep(4)
-passs = driver.find_element_by_name("password").send_keys("shjsdkw9128ADGOH@@+")
+passs = driver.find_element_by_name("password").send_keys("im@a@normal@person9956iswear")
 time.sleep(4)
 WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//button[text()='Sign up']"))).click()
 time.sleep(5)
@@ -80,10 +86,11 @@ selecty.select_by_value('1990')
 time.sleep(4)
 WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//button[text()='Next']"))).click()
 time.sleep(4)
-header = driver.find_element_by_id("react-root")
-time.sleep(5)
-all= header.find_elements_by_css_selector("*")
-time.sleep(5)
+driver.switch_to.window("secondtab")
+time.sleep(3)
+driver.find_element_by_class("dark:text-indigo-400 text-indigo-600 text-sm font-medium leading-5 truncate").click()
+time.sleep(3)
+
 requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id=-520315918&text="+driver.title+"5")
 time.sleep(4)
 
