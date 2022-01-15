@@ -23,6 +23,7 @@ chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
 #chrome_options.add_argument('--disable-gpu')
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 #driver=webdriver.Chrome(executable_path = os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
+driver = uc.Chrome(options=options)
 
 os.system("chmod +x chromedriver")
 #driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
