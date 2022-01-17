@@ -33,8 +33,8 @@ driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), opti
 driver=webdriver.Chrome(executable_path = os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
 
 os.system("chmod +x chromedriver")
-#driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-#driver = webdriver.Chrome('./chromedriver')
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+driver = webdriver.Chrome('./chromedriver')
 driver.get("https://www.instagram.com/accounts/emailsignup/")
 #requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id="+chatIdForLog+"&text="+driver.title+"1")
 time.sleep(2)
