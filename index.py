@@ -15,7 +15,7 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.keys import Keys
 import undetected_chromedriver.v2 as uc
-driver = uc.Chrome()
+#driver = uc.Chrome()
 chatIdForLog = "-520315918"
 
 
@@ -29,7 +29,7 @@ options.add_argument("start-maximized")
 options.add_experimental_option("excludeSwitches", ["enable-automation"])
 options.add_experimental_option('useAutomationExtension', False)
 options.add_argument("--disable-blink-features=AutomationControlled")
-#driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 #driver=webdriver.Chrome(executable_path = os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
 
 os.system("chmod +x chromedriver")
