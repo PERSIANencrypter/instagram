@@ -20,12 +20,12 @@ chatIdForLog = "-520315918"
 
 
 options = Options()
-options.add_argument("start-maximized")
 options = webdriver.ChromeOptions()
 options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
-chrome_options.add_argument('--no-sandbox')
-chrome_options.add_argument('--headless')
-chrome_options.add_argument('--disable-gpu')
+options.add_argument('--no-sandbox')
+options.add_argument("start-maximized")
+options.add_argument('--headless')
+options.add_argument('--disable-gpu')
 options.add_experimental_option("excludeSwitches", ["enable-automation"])
 options.add_experimental_option('useAutomationExtension', False)
 options.add_argument("--disable-blink-features=AutomationControlled")
