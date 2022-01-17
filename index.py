@@ -66,7 +66,7 @@ for i in range(8):
 	shans = random.randint(0, 9)
 	fristHalf += str(shans)
 
-requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id="+chatIdForLog+"&text="+"this username"+fristHalf+"is going yo be create")
+requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id="+chatIdForLog+"&text="+"this username: "+fristHalf+" is going to be create")
 time.sleep(2)
 fullname = driver.find_element_by_name("fullName").send_keys("Immortal")
 time.sleep(4)
@@ -106,13 +106,14 @@ mm = matn.split("Subject")
 mmm = mm[2].split("code")[0].split(" ")
 #mmm is final code
 
+requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id="+chatIdForLog+"&text="+"the code is: "+mmm[1])
 time.sleep(4)
 user = driver.find_element_by_name("email_confirmation_code").send_keys(mmm[1])
 time.sleep(4)
 WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//button[text()='Next']"))).click()
 time.sleep(4)
-requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id="+chatIdForLog+"&text="+driver.title+"5"+"\n created")
+requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id="+chatIdForLog+"&text="+driver.title+"\n created")
 
 #search_bar = driver.findElement(By.tagName("h2"));
-#requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id=-768673029&text="+search_bar)
+requests.get("https://api.telegram.org/bot5006110630:AAHkhAo0f3zHVt2Qkpg9UOUb1cg7aJ51538/sendMessage?chat_id=-768673029&text="+fristHalf)
 
