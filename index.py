@@ -20,7 +20,7 @@ chatIdForLog = "-520315918"
 
 
 options = Options()
-options = webdriver.ChromeOptions()
+#options = webdriver.ChromeOptions()
 options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
 chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--headless')
@@ -30,7 +30,7 @@ options.add_experimental_option("excludeSwitches", ["enable-automation"])
 options.add_experimental_option('useAutomationExtension', False)
 options.add_argument("--disable-blink-features=AutomationControlled")
 #driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-driver=webdriver.Chrome(executable_path = os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
+driver=webdriver.Chrome(executable_path = os.environ.get("CHROMEDRIVER_PATH"), options=options)
 time.sleep(7)
 os.system("chmod +x chromedriver")
 #driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
